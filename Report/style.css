@@ -1,0 +1,350 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Block Styling */
+.block {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hidden Element */
+.is-hidden {
+  display: none;
+}
+
+/* Headings and Paragraphs */
+
+.user-name{
+  color: black;
+  font-size: 20px;
+  text-align: right;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+h1 {
+  color: #005a87;
+  margin-bottom: 10px;
+}
+
+p.content {
+  color: #666;
+  margin-bottom: 20px;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Upload Button */
+button.upload {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 12px 24px;
+  margin: 4px 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button.upload:hover {
+  background-color: #45a049;
+}
+
+/* Additional Text */
+.text-block {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Logo and Header Styles */
+#upload-block img {
+  margin-bottom: 10px;
+}
+
+#processing-wp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  display: none;
+}
+
+.Allappointment {
+  background-color: #f5f5f5; /* Soft background for the whole section */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 800px; /* Adjust based on your layout preferences */
+  margin: 20px auto; /* Center the block */
+}
+
+.Allappointment h1 {
+  color: #333; /* Dark color for the section heading */
+  margin-bottom: 20px; /* Space below the heading */
+  text-align: center; /* Center the heading */
+}
+
+.appointment .app {
+  background-color: #ffffff;
+  margin-bottom: 15px; /* Space between appointment entries */
+  padding: 15px;
+  border-radius: 5px; /* Slightly rounded corners for each appointment */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Shadow for each appointment entry */
+  display: flex; /* Using flex to align items */
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Align items vertically */
+}
+
+.appointment .app .first-section h6 {
+  margin: 5px 0; /* Margin between each h6 */
+  color: #555; /* Dark grey color for text */
+  font-size: 14px; /* Slightly larger font size for readability */
+}
+.appointment .app .first-section h6 span{
+    font-size: 14px;
+    font-weight: 600;
+    color: #005a87;
+}
+
+/* Continue from the previous CSS */
+
+.appointment .app .second-section {
+  display: flex;
+  justify-content: space-around; /* Evenly space buttons */
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px; /* Space from the appointment details above */
+  gap: 5px;
+}
+
+.appointment .app .second-section button {
+  padding: 8px 15px; /* Adequate padding for tap targets */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Readable font size */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  width: 100px;
+
+}
+
+.view_appt {
+  background-color: #4CAF50; /* Green background for 'View' */
+  color: white; /* White text color */
+}
+
+.view_appt:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}
+
+.cancel_appt {
+  background-color: #f44336; /* Red background for 'Cancel' */
+  color: white; /* White text color */
+}
+
+.cancel_appt:hover {
+  background-color: #d32f2f; /* Darker shade on hover */
+}
+
+/* Enhancing the look of the spans within h6 for labels */
+.appointment .app .first-section h6 span {
+  font-weight: bold; /* Make labels bold */
+  color: #333; /* Slightly darker than the value for emphasis */
+}
+
+
+/* Delete Appointment Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body p {
+  margin: 15px 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-footer button {
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.confirm {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.blur-effect {
+  filter: blur(5px);
+}
+
+.no_appt{
+  text-align: center;
+  font-size: 20px;
+  color: #617b9a;
+  margin-top: 20px;
+
+
+}
+
+/* view appointment */
+
+#viewappt {
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px; /* Increased container size */
+  margin: 40px auto;
+  height: auto;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  overlay:auto;
+ 
+
+}
+
+.viewAppointment .first_section,
+.viewAppointment .second_section,
+.viewAppointment .third_section {
+  background-color: #ffffff;
+  padding: 20px; /* Increased padding for more space */
+  margin-bottom: 15px; /* Increased margin for more space between sections */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.first_sub_section{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.viewAppointment img.doctorsimage {
+  width: 80px; /* Increased size for visibility */
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.viewAppointment h4, 
+.viewAppointment h6 {
+  margin: 8px 0; /* Adjusted margin for spacing */
+  color: #333;
+  font-weight: 400; /* Reduced weight for clarity */
+  line-height: 1.6; /* Increased line height for readability */
+}
+.viewAppointment h6{
+  font-size: 14px;
+  font-weight: 200;
+  margin: 4px 0;
+
+}
+
+.viewAppointment .doctorspeciality span, 
+.viewAppointment .doctorsname span,
+.viewAppointment .doctorsEmail span,
+.viewAppointment .Appt_date span,
+.viewAppointment .Appt_time span,
+.viewAppointment .Appt_no span,
+.viewAppointment .Appt_name span,
+.viewAppointment .Appt_Userid span,
+.viewAppointment .Appt_email span {
+  font-weight: 600;
+  color: #005a87;
+}
+.close-button_apt {
+  position: absolute;
+  top: -8px;
+  right: 7px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: All 0.3s ease;
+}
+
+.close-button_apt:hover {
+  color: #d9534f;
+}

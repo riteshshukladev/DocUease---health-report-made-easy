@@ -1,0 +1,207 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Consistency in font */
+}
+
+body {
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Simplified Health Report Enhanced Styles */
+
+#simplifiedhealthreport {
+    color: #2e5077; /* Slightly darker shade of blue for the title */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px; /* Larger font size for main title */
+}
+
+#overallscore, #briefandhelpfulsummary, #positiveaspects, #areasofconcern, #conclusion {
+    color: #005a87; /* Consistent blue for section headers */
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-size: 20px; /* Slightly larger for visibility */
+}
+
+p {
+    color: #444; /* Darker text for better readability */
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.hlg { /* Highlight for overall score and important points */
+    font-weight: bold;
+    color: #c94e50; /* A warmer shade of red for emphasis */
+}
+
+ul {
+    margin-bottom: 16px;
+}
+
+ul li {
+    color: #444; /* Slightly darker for readability */
+    line-height: 1.4;
+}
+
+ul li strong {
+    color: #3a6ea5; /* A calm, reliable shade of blue for key terms */
+}
+
+/* Conclusion and advice for follow-up */
+#conclusion {
+    background-color: #e7f3ff; /* Softer light blue background */
+    padding: 10px;
+    border-left: 5px solid #3a6ea5; /* Harmonizing with key terms color */
+    margin-top: 20px;
+    font-style: italic; /* Slight styling to denote the importance */
+}
+
+/* Creativity with Borders and Shadows for Emphasis */
+.block, #conclusion {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+#report-block{
+    padding: 20px;
+}
+
+.doctor-block {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 1000px; /* Adjust based on your layout */
+    margin: 20px auto;
+}
+
+.doctor {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-section, .sec-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-section img {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.first-section h6, .sec-section p {
+    /* margin: 5px 0; */
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.doctors_submit_button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.doctors_submit_button:hover {
+    background-color: #0056b3;
+}
+
+/* Adjust the h3 style for better readability */
+.doctor-block > h3 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style for the email to make it less prominent */
+.first-section p {
+    color: #666;
+    font-size: 14px;
+}
+
+.apptConfirmation {
+    display: none; /* Initially hide the form */
+    position: fixed; /* Use fixed positioning to place it over other content */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the positioning to truly center the element */
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%; /* Adjust based on your preference, with a max-width to ensure responsiveness */
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+.apptConfirmation h1 {
+    color: #333; /* Dark color for readability */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.inputFormSubmission {
+    display: grid;
+    gap: 10px; /* Space between form elements */
+}
+
+.inputFormSubmission label {
+    font-size: 16px; /* Readable label size */
+    color: #555; /* Slightly lighter than the heading for hierarchy */
+}
+
+.inputFormSubmission input[type="date"],
+.inputFormSubmission input[type="time"],
+.inputFormSubmission input[type="submit"],
+.inputFormSubmission input[type="cancel"]
+{
+    padding: 8px;
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 4px; /* Matched rounding */
+    font-size: 16px; /* Consistent font sizing */
+}
+
+.inputFormSubmission input[type="submit"] {
+    background-color: #4CAF50; /* Green background for action */
+    color: white; /* Contrast text color */
+    cursor: pointer; /* Cursor hint for clickable element */
+    border: none; /* No border for the button */
+    text-align: center;
+}
+.inputFormSubmission input[type="cancel"]{
+    background-color: #f44336; /* Red background for cancel */
+    color: white; /* Contrast text color */
+    cursor: pointer; /* Cursor hint for clickable element */
+    border: none; /* No border for the button */
+    text-align: center;
+
+}
+
+.inputFormSubmission input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+/* Existing styles for .apptConfirmation and its contents */
+
+/* Close button styling */
+
